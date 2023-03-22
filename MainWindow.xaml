@@ -1,0 +1,71 @@
+﻿<Window x:Class="LinkedList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LinkedList"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#FBEAEB"/>
+            <Setter Property="Margin" Value="20,10,0,0"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="20,10,0,0"/>
+            <Setter Property="FontWeight" Value="Light"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="10,10,0,0"/>
+            <Setter Property="FontWeight" Value="Light"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="20,30,0,0"/>
+            <Setter Property="FontWeight" Value="Light"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid  Grid.Column="0" Background="#2F3C7E">
+            <StackPanel>
+                <Label Content="JSquare Admission" HorizontalContentAlignment="Center" FontSize="20"/>
+                <StackPanel Margin="0,10,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Name"/>
+                    <TextBox x:Name="txtbox_name">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Margin="0,10,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Referral"/>
+                    <ComboBox x:Name="lstbox_ref1"/>
+                </StackPanel>
+                <Button x:Name="btn_submit" Content="Submit" Click="btn_submit_Click" Background="#FBEAEB"/>
+            </StackPanel>
+        </Grid>
+        <Grid  Grid.Column="1" Background="#FBEAEB">
+            <StackPanel>
+                <Label Content="JSquare Admission Retrieval List" Foreground="#2F3C7E" FontSize="20" HorizontalContentAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Referred" Foreground="#2F3C7E"/>
+                    <ComboBox x:Name="lstbox_ref2"/>
+                </StackPanel>
+                <Button Content="Retrieve" Background="#2F3C7E" Foreground="White" Click="Button_Click"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
