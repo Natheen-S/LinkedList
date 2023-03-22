@@ -88,5 +88,10 @@ namespace LinkedList
                 val3 = string.Empty;
             }
         }
+
+        private void lstbox_ref1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txtbox_name.Text = "";
+        }
     }
 }

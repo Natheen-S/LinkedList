@@ -51,7 +51,7 @@
                 </StackPanel>
                 <StackPanel Margin="0,10,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
                     <Label Content="Referral"/>
-                    <ComboBox x:Name="lstbox_ref1"/>
+                    <ComboBox x:Name="lstbox_ref1" SelectionChanged="lstbox_ref1_SelectionChanged"/>
                 </StackPanel>
                 <Button x:Name="btn_submit" Content="Submit" Click="btn_submit_Click" Background="#FBEAEB"/>
             </StackPanel>
